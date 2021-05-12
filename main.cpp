@@ -16,7 +16,7 @@
 #include "tasks/task_3.cpp"
 #include "tasks/task_4.cpp"
 #include "tasks/task_5.cpp"
-//#include "tasks/task_6.cpp"
+#include "tasks/task_6.cpp"
 #include "tasks/task_7.cpp"
 
 /*
@@ -35,5 +35,5 @@
 
 int main()
 {
-    return task_7();
+    return task_6();
 }
