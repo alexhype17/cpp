@@ -6,48 +6,57 @@
 //
 #include "task_7.hpp"
 
-char spr(char*, char, int, int, int &);
+void spr(char*, char*, char, int, int, int &);
 
 int task_7()
 {
     int i, in, ik, s;
-    char x[80], symbol, new_string[20];
-    std::cout << "Введите символ: ";
+    char x[40], symbol;
+    char* new_string = new char[999];
+    printf("Введите символ: ");
     std::cin >> symbol;
+    std::cin.ignore(1000,'\n');
     
-    std::cout << "Введите строку: ";
-    std::cin.get(x, 20, '*');
-    std::cout << x;
+    printf("Введите строку: ");
+    std::cin.get(x, 40, '$');
+  
     i = 0; in = 0; ik = 0; s = 0;
     while(x[i])
     {
         if(x[i] == ' ')
         {
             ik = i-1;
-            spr(x, symbol, in, ik, s);
-//            new_string = std::strcat(new_string, );
+            char h[80];
+            spr(x, h, symbol, in, ik, s);
+            std::strcat(new_string, h);
+            in = i+1;
         }
         i++;
     }
     
-    std::cout << "res " << x;
+    puts(new_string);
     return 0;
 }
 
-char spr(char* c, char symbol, int d, int e, int &k)
+void spr(char* c, char* h, char symbol, int d, int e, int &k)
 {
     
-    int j;
+    bool finded = false;
+    int findedIdx = 0;
     k++;
     
 //    std::cout << symbol << std::endl;
-    std::cout << " " << k << " строка: " << std::endl;
-    for(j=d;j<=e;j++)
+    std::cout << " " << k << " строка: start" << d << " end " << e << std::endl;
+    for(int j=d;j<=e;j++)
     {
-        if(symbol == c[j]) break;
-        c[j] = ' ';
-//        std::cout << c[j] << std::endl;
+        if(symbol == c[j]) {
+            finded = true;
+        }
+        if(finded) {
+            h[findedIdx] = c[j];
+            findedIdx++;
+        }
     }
-    
-    return *c;
+    h[findedIdx] = ' ';
+    puts(h);
 }

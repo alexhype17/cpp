@@ -8,6 +8,8 @@
 #include <math.h>
 #include <iostream>
 #include <string.h>
+#include <cstdio>
+#include <cstring>
 
 #include "examples/examples_task_4.cpp"
 #include "examples/examples_task_5.cpp"
@@ -35,5 +37,5 @@
 
 int main()
 {
-    return task_6();
+    return task_7();
 }
