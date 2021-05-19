@@ -20,6 +20,8 @@
 #include "tasks/task_5.cpp"
 #include "tasks/task_6.cpp"
 #include "tasks/task_7.cpp"
+#include "tasks/task_8.cpp"
+#include "tasks/task_9.cpp"
 
 /*
  Примеры:
@@ -33,9 +35,11 @@
  task_5
  task_6
  task_7
+ task_8
+ task_9
  */
 
 int main()
 {
-    return task_7();
+    return task_9();
 }
