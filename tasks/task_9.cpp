@@ -43,7 +43,7 @@ public:
 
     void display()
     {
-        std::cout << "Объект " << " рейс " << _id << " пункт назначения " << _end_point_number << " кол во билетов " << _tickets_count << std::endl;
+        std::cout << "Объект " << " рейс " << _id << " пункт назначения " << _end_point_number << " кол во билетов  " << _tickets_count << std::endl;
     }
 };
 
@@ -62,16 +62,10 @@ int task_9()
     for(int i = 0;i<3;i++)
     {
         flights[i].display();
-    }
-    
-    for (int i =0; i<3; i++)
-    {
         sum += flights[i].get_tickets_count();
     }
     
     std::cout << "All tickets = " << sum << std::endl;;
-    
-    
     return 0;
     
 }
