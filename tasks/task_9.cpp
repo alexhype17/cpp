@@ -13,11 +13,6 @@ private:
     int _end_point_number;
     int _tickets_count;
 public:
-    int get_tickets_count()
-    {
-        return _tickets_count;
-    }
-
     Aeroflot() // конструктор по умолчанию
     {
         _id = 0;
@@ -45,6 +40,11 @@ public:
     {
         std::cout << "Объект " << " рейс " << _id << " пункт назначения " << _end_point_number << " кол во билетов  " << _tickets_count << std::endl;
     }
+    
+    int get_tickets_count()
+    {
+        return _tickets_count;
+    }
 };
 
 int task_9()
@@ -52,7 +52,7 @@ int task_9()
     Aeroflot flights[3];
     
     int sum = 0;
-    
+
     for(int i = 0;i<3;i++)
     {
         flights[i] = Aeroflot();

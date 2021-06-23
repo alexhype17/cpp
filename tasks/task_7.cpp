@@ -11,18 +11,18 @@ void spr(char*, char*, char, int &, int, int, int &);
 int task_7()
 {
     int i, in, ik, s, findedIdx;
-    char x[40], symbol, h[999]={0};
+    char x[120], symbol, h[999]={0};
     printf("Введите символ: ");
     std::cin >> symbol;
     std::cin.ignore(1000,'\n');
     
     printf("Введите строку: ");
-    std::cin.get(x, 40, '$');
+    std::cin.get(x, 60, '$');
   
     i = 0; in = 0; ik = 0; s = 0;
     while(x[i])
     {
-        if(x[i] == ' ')
+        if(x[i] == ' ' || x[i + 1] == NULL)
         {
             ik = i-1;
             spr(x, h, symbol, findedIdx, in, ik, s);
@@ -37,7 +37,8 @@ void spr(char* c, char* h, char symbol, int &findedIdx, int d, int e, int &k)
 {
     bool finded = false;
     k++;
-    // ksdkkgkse kjksjgkjekej kjsekjkgkjek sjkxjgggseee
+    // ksdkkgkse kjksjgkjekej kjsekjkgkjek sjkxjgggseeedssddsdssd
+    // ksdkkgkse kjksjgkjekej kjsekjkkjek sjkxjgggseeedssddsdssd
     std::cout << " " << k << " строка: start" << d << " end " << e << std::endl;
     for(int j=d;j<=e;j++)
     {

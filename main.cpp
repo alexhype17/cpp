@@ -23,6 +23,8 @@
 #include "tasks/task_8.cpp"
 #include "tasks/task_9.cpp"
 
+#include "tasks/task_5_2.cpp"
+#include "tasks/task_5_3.cpp"
 /*
  Примеры:
  examples_task_4
@@ -33,6 +35,8 @@
  task_3
  task_4
  task_5
+ task_5_2
+ task_5_3
  task_6
  task_7
  task_8
@@ -41,5 +45,5 @@
 
 int main()
 {
-    return task_9();
+    return task_5_3();
 }
